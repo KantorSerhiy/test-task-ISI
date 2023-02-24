@@ -10,14 +10,12 @@ class MessageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Message
-        fields = ['id', 'sender', "thread", 'text', 'created']
+        fields = ["sender", "thread", "text", "created"]
 
 
 class ThreadSerializer(serializers.ModelSerializer):
     participants = serializers.SlugRelatedField(
-        many=True,
-        queryset=User.objects.all(),
-        slug_field="username"
+        many=True, queryset=User.objects.all(), slug_field="username"
     )
     last_message = serializers.SerializerMethodField()
 
@@ -25,7 +23,6 @@ class ThreadSerializer(serializers.ModelSerializer):
         message = obj.messages.last()
         if message:
             return MessageSerializer(message).data["text"]
-
 
     class Meta:
         model = Thread
