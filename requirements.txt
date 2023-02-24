@@ -1,8 +1,16 @@
 asgiref==3.6.0
+attrs==22.2.0
 Django==4.1.7
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
+drf-spectacular==0.25.1
+inflection==0.5.1
+jsonschema==4.17.3
+MarkupSafe==2.1.2
 PyJWT==1.7.1
+pyrsistent==0.19.3
 pytz==2022.7.1
+PyYAML==6.0
 six==1.16.0
 sqlparse==0.4.3
+uritemplate==4.1.1
