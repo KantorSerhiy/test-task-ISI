@@ -11,7 +11,7 @@ venv\Scripts\activate (on Windows)
 venv\bin\activate (on Linux)
 pip install -r requirements.txt
 python manage.py migrate
-pytnon manage.py loaddata data.json 
+python manage.py loaddata data.json 
 python manage.py runserver
 ````
 
